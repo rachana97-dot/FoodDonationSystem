@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding-top: 100px;
+            box-sizing: border-box;
+            background-color: #e6d7d7;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            color: #fff;
+            background-color: black;
+            height: 60px;
+            text-align: center;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 180px;
+            margin-right: 10px;
+            padding-left: 10px;
+        }
+
+        .navbar-text {
+            font-size: 2em;
+            font-family: "Bookman Old Style";
+            color: coral;
+        }
+
+        .navbar-text:hover {
+            color: black;
+            transform: scale(1.1);
+        }
+
+        nav a {
+            color: whitesmoke;
+            font-family: 'Times New Roman', Times, serif;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: large;
+        }
+
+        .nav-links a:hover {
+            color: red;
+            transform: scale(1.1);
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 80px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+
+            max-width: 800px;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+
+        .container {
+            text-align: center;
+            background-color: #e3e6e7;
+            /* padding-left: 300px;
+            padding-right: 300px; */
+            /* Background color with opacity for better readability */
+        }
+
+       
+        .container-topfo {
+            background-color:whitesmoke;
+            font-family: Arial, Helvetica, sans-serif;
+            padding-left: 400px;
+            padding-right: 400px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+        }
+        .container-fotop {
+            /* background-color: #f0f0f0; */
+            /* padding:20px; */
+            text-align: center;
+            /* display: flex; */
+            justify-content: space-between;
+            background-color:rgb(2, 176, 156);
+            color:black; 
+            /* height:60px; */
+            padding-top: 10px;
+            padding-bottom: 10px; 
+        }
+       footer {
+            background-color: #333;
+            color: white;
+            padding-top: 2px;
+            padding-bottom: 3px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo-container">
+            <img class="logo" src="logobg.png" alt="Logo">
+            <span class="navbar-text"><strong><em> Foodate </strong></em></span>
+        </div>
+        <div class="nav-links">
+            <a th:href="@{/}" class="button">Home</a>
+            <a th:href="@{/AboutUs}" class="button">who we Are</a>
+            <a th:href="@{/view}" class="button">View Donation </a>
+            <a th:href="@{/Contact}" class="button">Contact</a>
+            <a th:href="@{/Organizations}" class="button">Organizations</a>
+            <a th:href="@{/Event}" class="button">Event</a>
+
+            <a th:href="@{/donate}" class="button">Donate Food</a>
+        </div>
+    </nav>
+    <div class="container" style="font-family:Verdana, Geneva, Tahoma, sans-serif;">
+        <h2><b> <span style="color: crimson; font-size:40px;">ABOUT</span></b></h2>
+        <p>Welcome to our Food Waste Management System! We are dedicated to making a positive impact by helping
+            individuals and businesses manage their food waste efficiently.</p>
+        <p>Our mission is to reduce food waste, promote sustainable practices, and contribute to a healthier
+            environment. Through innovative solutions and community engagement, we aim to create a better and more
+            sustainable future for all.</p>
+        <p>Thank you for joining us on this journey towards a greener and more sustainable world!</p>
+        <img src="abu.jpg" alt="About Us Image" style=" max-width: 600px; margin: 50px auto;">
+
+    </div>
+    <div class="container-topfo">
+        <div>
+            <h3>CONTACT US</h3>
+            <p>500 Amber Street Shana colonye<br>Pune, (555) 123-4567</p>
+            <p>Email: info@foodate.com</p>
+        </div>
+        <div>
+            <h3>CONNECT WITH US</h3>
+            <a href="#" target="_blank"><img src="insta-logo.png" alt="Instagram" style="width:30px"></a><br>
+            <a href="#" target="_blank"><img src="facebook-logo.png" alt="Facebook" style="width:30px"></a><br>
+            <a href="#" target="_blank"><img src="mail-logo.png" alt="Mail" style="width:30px"></a>
+        </div>
+    </div>
+    <div class="container-fotop">
+        <h3>Registered Charity Number : 0123456789</h3>
+    </div>
+
+
+    <footer>
+        <p>&copy; 2024 Food Donation Organization. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

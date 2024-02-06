@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming Events - Food Donation</title>
+    <!-- Add your CSS styles or link to an external stylesheet here -->
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding-top: 100px;
+            background-color: gainsboro;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin-bottom: 60px;
+            color: #333;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            color: #fff;
+            background-color: black;
+            height: 60px;
+            text-align: center;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 180px;
+            margin-right: 10px;
+            padding-left: 10px;
+        }
+
+        .navbar-text {
+            font-size: 2em;
+            font-family: "Bookman Old Style";
+            color: coral;
+        }
+
+        .navbar-text:hover {
+            color: black;
+            transform: scale(1.1);
+        }
+
+        nav a {
+            color: whitesmoke;
+            font-family: 'Times New Roman', Times, serif;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: large;
+        }
+
+        .nav-links a:hover {
+            color: red;
+            transform: scale(1.1);
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 1400px;
+            text-align: center;
+            flex: 1;
+            padding-bottom: 100px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .event-grid {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .event-card {
+            flex: 0 0 30%;
+            background-color: #e3e6e7;
+            /* Bootstrap light gray background color */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            transition: transform 0.3s;
+            /* Add a transition for smooth scaling */
+        }
+
+        .event-card:hover {
+            transform: scale(1.1);
+            /* Enlarge the card on hover */
+        }
+
+        .contact-section h3 {
+            color: #333;
+        }
+
+        .contact-section p {
+            color: #555;
+        }
+
+        .container-topfo {
+            padding-left: 380px;
+            
+            bottom: 0;
+            width: 100%;
+            color: black;
+            background-color: whitesmoke;
+            height: 180px;
+            text-align: center;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        .container-fotop {
+            padding-left: 480px;
+            bottom: 0;
+            width: 100%;
+            color: black;
+            background-color: rgb(2, 176, 156);
+            height: 80px;
+            text-align: center;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        footer {
+            bottom: 0;
+            width: 100%;
+            color: #fff;
+            background-color: black;
+            height: 60px;
+            text-align: center;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 480px;
+        }
+
+       
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo-container">
+            <img class="logo" src="logobg.png" alt="Logo">
+            <!-- Replace 'your-logo.png' with the actual path to your logo -->
+            <span class="navbar-text"><strong><em> Foodate </strong></em></span>
+        </div>
+        <div class="nav-links">
+            <a th:href="@{/}" class="button">Home</a>
+            <a th:href="@{/AboutUs}" class="button">who we Are</a>
+            <a th:href="@{/view}" class="button">View Donation </a>
+            <a th:href="@{/Contact}" class="button">Contact</a>
+            <a th:href="@{/Organizations}" class="button">Organizations</a>
+            <a th:href="@{/Event}" class="button">Event</a>
+
+            <a th:href="@{/donate}" class="button">Donate Food</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2><span style="font-size:larger; color:crimson; ;">Upcoming Events</span></h2>
+
+        <div class="event-grid">
+            <!-- Event 1 -->
+            <div class="event-card">
+                <img src="Event.avif" alt="Event 1 Image" style="height:300px; width: 300px;">
+                <br>
+                <br>
+                <br>
+
+                <p>Date: January 15, 2024</p>
+                <p>Time: 10:00 AM - 2:00 PM</p>
+                <p>Location: 123 Main Street, Amravati , Maharashtra, 12345</p>
+            </div>
+
+            <!-- Event 2 -->
+            <div class="event-card">
+                <img src="event3.jpg" alt="Event 2 Image" style="height:300px; width: 300px;">
+                <br>
+                <br>
+                <br>
+                <p>Date: February 5, 2024</p>
+                <p>Time: 10:00 AM - 2:00 PM</p>
+                <p>Location: 02 Main Ring, Pune , Maharashtra, 23412</p>
+                <p>Description: Join us for a community event at the Community Center. We'll be collecting food
+                    donations and spreading awareness about reducing food waste.</p>
+            </div>
+
+            <!-- Event 3 -->
+            <div class="event-card">
+                <img src="Copy of Black Charity Campaign Fundraising Flyer.jpg" alt="Event 3 Image" style="height:300px; width: 300px;">
+                <br>
+                <br>
+                <br>
+                <p>Date: March 25, 2024</p>
+                <p>Time: 3:00 PM - 7:00 PM</p>
+                <p>Location: Shivaji College, Nagpur , Maharashtra</p>
+                <p>Description: Support our initiative at the Shivaji College. Attendees can donate non-perishable food
+                    items, and we'll have informative sessions on reducing food wastage.</p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <div class="container-topfo">
+        <div class="row">
+            <div class="col-md-6">
+                <h5><b>CONTACT US</h5></b>
+                <p>500 Amber Street Shana colony Pune, (555) 123-4567</p>
+                <p>Email: info@foodate.com</p>
+            </div>
+            <div class="col-md-6">
+                <h5><b>CONNECT WITH US</h5></b>
+                <a href="#" target="_blank"><img src="insta-logo.png" alt="Instagram" style="width:30px"></a><br>
+                <a href="#" target="_blank"><img src="facebook-logo.png" alt="Facebook" style="width:30px"></a><br>
+                <a href="#" target="_blank"><img src="mail-logo.png" alt="Mail" style="width:30px"></a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fotop">
+
+        <h5><b>Registered Charity Number : 0123456789</b></h5>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Food Donation Organization. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.8/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

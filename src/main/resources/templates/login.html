@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('imageback.jpeg');
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+
+        }
+
+        .logo {
+            width: 180px;
+            /* Adjust the width of your logo */
+            margin-right: 10px;
+            padding-left: 10px;
+
+        }
+
+        .navbar-text {
+            font-size: 2em;
+            font-family: "Bookman Old Style";
+            color: coral;
+
+
+        }
+
+        .navbar-text :hover {
+            color: black;
+            transform: scale(1.1);
+        }
+
+
+        nav a {
+            color: whitesmoke;
+            font-family: 'Times New Roman', Times, serif;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: large;
+        }
+
+        .nav-links a:hover {
+            color: red;
+            /* Change the color on hover */
+            transform: scale(1.1);
+            /* Expand the text on hover */
+        }
+
+        .nav-links .button {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .nav-links .button:hover {
+            background-color: cadetblue;
+        }
+
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #555;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        p {
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1.5em 0;
+            height: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo-container">
+            <img class="logo" src="logobg.png" alt="Logo">
+            <!-- Replace 'your-logo.png' with the actual path to your logo -->
+            <span class="navbar-text"><strong><em> Foodate </strong></em></span>
+        </div>
+        <div class="nav-links">
+            <a th:href="@{/}" class="button">Home</a>
+            <a th:href="@{/AboutUs}" class="button">who we Are</a>
+            <a th:href="@{/view}" class="button">View Donation </a>
+            <a th:href="@{/Contact}" class="button">Contact</a>
+            <a th:href="@{/Organizations}" class="button">Organizations</a>
+                        <a th:href="@{/Event}" class="button">Event</a>
+            
+            <a th:href="@{/donate}" class="button">Donate Food</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <form>
+            <h2>User Login</h2>
+
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Login</button>
+
+            <p>Don't have an account? <a href="SignUp.html">Sign Up here</a></p>
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2024 Food Waste Management System. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
+

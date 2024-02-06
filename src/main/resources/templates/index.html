@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Waste Management System</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            padding-top: 60px;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            color: #fff;
+            background-color:black;
+            height: 60px;
+            text-align: center;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 180px;
+            margin-right: 10px;
+            padding-left: 6px;
+        }
+
+        .navbar-text {
+            font-size: 2em;
+            font-family: "Bookman Old Style";
+            color: coral;
+            padding-right:40px;
+        }
+
+        .navbar-text:hover {
+            color:white;
+            transform: scale(1.1);
+        }
+
+        nav a {
+            color: whitesmoke;
+            font-family: 'Times New Roman', Times, serif;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: large;
+        }
+
+        .nav-links a:hover {
+            color: red;
+            transform: scale(1.1);
+        }
+
+        #video-container {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+            padding-bottom:100px;
+        }
+
+        #video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: black;
+            padding: 0;
+                        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            
+        }
+           #home {
+    color: rgb(30, 30, 46);
+    font-weight: normal;
+    transition: transform 0.3s ease; 
+    font-size: larger;
+}
+
+        #home :hover{
+            color: red;
+    font-weight: bold;
+    transform: scale(1.1); 
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 0.1px;
+            width: 70%;
+            margin: auto;
+            padding-bottom:30px;
+        }
+
+        .grid-item {
+            /* border: 0.1px solid rgb(237, 236, 236); */
+            /* padding: 20px; */
+            /* width: 500px; */
+            text-align: center;
+            padding: 0;
+            margin: 0;
+            border: none;
+            box-sizing: border-box;
+            height: 370px;
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+
+        }
+
+
+        .image-container {
+            position: relative;
+
+            overflow: hidden;
+            height: 370px;
+
+            text-align: center;
+            padding: 0;
+            margin: 0;
+            border: none;
+            box-sizing: border-box;
+
+        }
+
+        .blurred-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(163, 108, 108, 0.7);
+            filter: blur(8px);
+            z-index: 1;
+        }
+
+        .text-overlay {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #333;
+            /* Adjust the text color */
+            z-index: 2;
+        }
+
+        section {
+            text-align: center;
+            background-color: whitesmoke;
+        }
+
+        section .container {
+            background-color: whitesmoke;;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .spacer {
+            height: 1em;
+            width: 10%;
+
+        }
+        
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo-container">
+            <img class="logo" src="logobg.png" alt="Logo">
+            <!-- Replace 'your-logo.png' with the actual path to your logo -->
+            <span class="navbar-text"><strong><em> Foodate </strong></em></span>
+        </div>
+        <div class="nav-links">
+            <a th:href="@{/}" class="button">Home</a>
+            <a th:href="@{/AboutUs}" class="button">who we Are</a>
+            <a th:href="@{/view}" class="button">View Donation </a>
+            <a th:href="@{/Contact}" class="button">Contact</a>
+            <a th:href="@{/Organizations}" class="button">Organizations</a>
+                        <a th:href="@{/Event}" class="button">Event</a>
+            
+            <a th:href="@{/donate}" class="button">Donate Food</a>
+            
+            
+        </div>
+    </nav>
+
+    <div id="video-container">
+        <!-- Replace 'your-video-file.mp4' with the actual path to your video file -->
+        <video id="video-background" autoplay muted loop>
+            <source src="BgVideo (1).mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        
+    </div>
+    
+     <div class="container">
+            <div id="home">
+                <h2>Welcome to our Food Donation Organization</h2>
+                </div>
+        </div> 
+    
+    <div class="grid-container">
+        <div class="grid-item"><img class="blurred-image" src="About.webp" alt="img" style="height: 500px;"></div>
+
+
+
+
+        <div class="grid-item" style="background-color:rgb(232, 220, 220); padding-top: 70px; font-family:'Gill Sans';">
+            <strong style="font-size: xx-large; "> OUR MISSION </strong><br><br>Certainly! Here's an example of a
+            mission statement for a food donation organization:
+
+            "Our mission is to alleviate hunger and reduce food waste by connecting surplus food to those in need.
+            Guided by the principles of compassion and community, we work tirelessly to rescue and redistribute
+            nutritious food, ensuring that no one goes to bed hungry. Through our efforts, we aim to build a more
+            sustainable and equitable society,
+            where every individual has access to an ample and reliable source of nourishment."
+            <br><br>
+            <a href="AboutUs" class="button">Read More</a>
+        </div>
+
+
+
+
+        <div class="grid-item" style="background-color:darkcyan;  padding-top: 70px; font-family:'Gill Sans';"><strong
+                style="font-size: xx-large; "> LATEST NEWS </strong><br><br>
+            <p>Hunger & Malnutrition The leading consequence of food wastage on the country is its direct contribution
+                to malnutrition and starvation. According to a report released by Feeding India, around 194.4 million
+                people or 14.3% of the population are not receiving adequate nutrition. India is also ranked in the
+                107th position out of 121 countries in the Global Hunger Index, 2022.
+                <br> <br> <a
+                    href="https://timesofagriculture.in/food-wastage-in-india-farm-to-bin/#:~:text=In%20India%2C%2040%25%20of%20the,and%20affects%20the%20nation's%20economy.">
+                    See More</a>
+        </div>
+
+        <div class="image-container">
+            <img src="BgVideo (2).jpg">
+            <div class="blurred-overlay"></div>
+            <div class="text-overlay">
+                <span style="font-family:'Gill Sans';">
+                    <h2> <em><b>WELCOME TO OUR <br>"FOOD DONATION ORGANIZATION"</b></em></h2>
+                </span>
+                <span style="font-family: 'Times New Roman';">
+                    <p>
+                    <h4>Many of the world's children will go to sleep hungry tonight, while cows around the globe will
+                        have
+                        full stomachs so that a small percentage of people can eat.</h4>
+                    </p>
+                </span>
+                <a href="Organizations">NGO</a>
+            </div>
+        </div>
+    </div>
+    
+     
+    
+    
+<div class="container" style="padding-top: 60px; padding-bottom: 60px; text-align: center;">
+    <div class="image-container" style ="height:200px; width:1100px;  padding-bottom:100px;">
+            <img src="back.jpg" style ="height:auto; width:1000px;">
+            <div class="blurred-overlay" style="background: rgba(171, 184, 115, 0.7);; filter: blur(8px);" >
+            </div>
+            <div class="text-overlay">
+   <pre> <h1>GIVE TODAY TO HELP End Hunger           <button type="submit" style="height:40px; width:120px; border: 1px solid white; border-radius: 10px ;"><a href=donate class="button" >Donate Now!</button></a></h1></pre>
+            </div>
+        </div>
+    </div>
+</div>
+
+ 
+    <section>
+        <div class="container">
+            <div class="contact-info" style="color: black;">
+                <h3>CONTACT US</h3>
+                <p>500 Amber Street Shana colonye<br>Pune,  (555) 123-4567</p>
+                <p>Email: info@foodate.com</p>
+            </div>
+
+            <div class="spacer"></div>
+
+            <div class="social-icons" style="color:black">
+                <h3>CONNECT WITH US</h3>
+                <a href="#" target="_blank"><img src="insta-logo.png" alt="Instagram" style="width:30px"></a><br>
+                <a href="#" target="_blank"><img src="facebook-logo.png" alt="Facebook" style="width:30px"></a><br>
+                <a href="#" target="_blank"><img src="mail-logo.png" alt="Mail"  style="width:30px"></a>
+            </div>
+        </div>
+    </section>
+
+     <div>
+        <div class="container" style="color:black; padding:15px; background-color:rgb(2, 176, 156);">
+            <h3>Registered Charity Number : 0123456789</h3>
+        </div>
+    </div> 
+
+    <footer>
+        <p>&copy; 2024 Food Donation Organization. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

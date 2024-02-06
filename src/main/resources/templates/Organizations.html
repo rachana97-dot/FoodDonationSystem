@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Waste Management System</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            padding-top: 100px;
+            font-family: Arial, sans-serif;
+            background-image: url('30+ Presentation Background Images for PowerPoint.jpg');
+            /*background-color:rgb(82, 143, 145);*/
+            background-size: cover;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            color: #fff;
+            background-color: black;
+            height: 60px;
+            text-align: center;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 180px;
+            margin-right: 10px;
+            padding-left: 10px;
+        }
+
+        .navbar-text {
+            font-size: 2em;
+            font-family: "Bookman Old Style";
+            color: coral;
+        }
+
+        .navbar-text:hover {
+            color: black;
+            transform: scale(1.1);
+        }
+
+        nav a {
+            color: whitesmoke;
+            font-family: 'Times New Roman', Times, serif;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: large;
+        }
+
+        .nav-links a:hover {
+            color: red;
+            transform: scale(1.1);
+        }
+
+
+        .container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            padding: 20px;
+        }
+
+
+        .card {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .card-body {
+            padding: 15px;
+        }
+
+        .btn-primary {
+            background-color: white;
+            color: black;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .card-link {
+            color: #3498db;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .container-topfo {
+            background-color: whitesmoke;
+            font-family: Arial, Helvetica, sans-serif;
+            padding-left: 400px;
+            padding-right: 400px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .container-fotop {
+            /* background-color: #f0f0f0; */
+            /* padding:20px; */
+            text-align: center;
+            /* display: flex; */
+            justify-content: space-between;
+            background-color: rgb(2, 176, 156);
+            color: black;
+            /* height:60px; */
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding-top: 2px;
+            padding-bottom: 3px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo-container">
+            <img class="logo" src="logobg.png" alt="Logo">
+            <span class="navbar-text"><strong><em> Foodate </strong></em></span>
+        </div>
+        <div class="nav-links">
+            <a th:href="@{/}" class="button">Home</a>
+            <a th:href="@{/AboutUs}" class="button">who we Are</a>
+            <a th:href="@{/view}" class="button">View Donation </a>
+            <a th:href="@{/Contact}" class="button">Contact</a>
+            <a th:href="@{/Organizations}" class="button">Organizations</a>
+            <a th:href="@{/Event}" class="button">Event</a>
+
+            <a th:href="@{/donate}" class="button">Donate Food</a>
+        </div>
+    </nav>
+
+
+    <div class="container">
+
+        <div class="card" style="width: 20rem; height:600px">
+            <img src="org1.png" class="card-img-top" alt="FeedingIndia">
+            <div class="card-body">
+                <h4 class="card-title" style="color:crimson">Feeding India</h4>
+                <p class="card-text" style="padding-bottom:25px">Feeding India, a Zomato giveback, is a not for profit
+                    organization, designing interventions to reduce hunger among underserved communities in India.</p>
+                <a href="donate" class="btn btn-primary">Donate</a><br>
+                <a href="https://www.feedingindia.org/" class="card-link">Feeding India </a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 20rem; height:600px">
+            <img src="org6.png" class="card-img-top" style="height:210px; width:230px; padding-bottom:50px"
+                alt="Rise Against Hunger">
+            <div class="card-body">
+                <h4 class="card-title" style="color:crimson">Rise Against Hunger Foundation</h4>
+                <p class="card-text" style="padding-bottom:20px">Rise Against Hunger is an international hunger relief
+                    non-profit organization that coordinates the packaging and distribution of food and other aid to
+                    people in developing nations.</p>
+                <a href="donate" class="btn btn-primary">Donate</a><br>
+                <a href="https://www.riseagainsthunger.org/" class="card-link">Rise Against Hunger</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 20rem;height:600px">
+            <img src="org3.png" class="card-img-top" alt="UdayFoundation" style="height: 15rem; padding-bottom:20px">
+            <div class="card-body" style="padding-bottom:20px">
+                <h4 class="card-title" style="color:crimson">Uday Foundation</h4>
+                <p class="card-text">Feeding the Hungry: Donate Food and Support Uday Foundation, an NGO Making a
+                    Difference. At Uday Foundation, our mission is to provide free and nutritious meals</p>
+            </div>
+            <div class="card-body">
+                <a href="donate" class="btn btn-primary">Donate</a><br>
+                <a href="https://www.udayfoundation.org/" class="card-link">Uday Foundation</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 20rem;height:600px">
+            <img src="org5.png" class="card-img-top" alt="No Food Waste" style="height: 18rem;">
+            <div class="card-body">
+                <h4 class="card-title" style="color:crimson">No Food Waste organization</h4>
+                <p class="card-text">No Food Waste is an organization which aims to redistribute excess food from
+                    weddings, parties, events to those who are hungry.</p>
+            </div>
+            <div class="card-body">
+                <a href="donate" class="btn btn-primary">Donate</a><br>
+                <a href="https://nofoodwaste.org/" class="card-link">No Food Waste</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-topfo">
+        <div>
+            <h3>CONTACT US</h3>
+            <p>500 Amber Street Shana colonye<br>Pune, (555) 123-4567</p>
+            <p>Email: info@foodate.com</p>
+        </div>
+        <div>
+            <h3>CONNECT WITH US</h3>
+            <a href="#" target="_blank"><img src="insta-logo.png" alt="Instagram" style="width:30px"></a><br>
+            <a href="#" target="_blank"><img src="facebook-logo.png" alt="Facebook" style="width:30px"></a><br>
+            <a href="#" target="_blank"><img src="mail-logo.png" alt="Mail" style="width:30px"></a>
+        </div>
+    </div>
+    <div class="container-fotop">
+        <h3>Registered Charity Number : 0123456789</h3>
+    </div>
+
+
+    <footer>
+        <p>&copy; 2024 Food Donation Organization. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

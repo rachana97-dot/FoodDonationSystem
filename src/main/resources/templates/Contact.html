@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            padding-top: 90px;
+            background-color: gainsboro;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            color: #fff;
+            background-color: cadetblue;
+            height: 60px;
+            text-align: center;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 180px;
+            margin-right: 10px;
+            padding-left: 10px;
+        }
+
+        .navbar-text {
+            font-size: 2em;
+            font-family: "Bookman Old Style";
+            color: coral;
+        }
+
+        .navbar-text:hover {
+            color: black;
+            transform: scale(1.1);
+        }
+
+        nav a {
+            color: whitesmoke;
+            font-family: 'Times New Roman', Times, serif;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: large;
+        }
+
+        .nav-links a:hover {
+            color: red;
+            transform: scale(1.1);
+        }
+        
+
+
+        .container-topfo {
+            background-color: whitesmoke;
+            font-family: Arial, Helvetica, sans-serif;
+            padding-left: 400px;
+            padding-right: 400px;
+            padding-top: 30px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .container-fotop {
+            /* background-color: #f0f0f0; */
+            /* padding:20px; */
+            text-align: center;
+            /* display: flex; */
+            justify-content: space-between;
+            background-color: rgb(2, 176, 156);
+            color: black;
+            /* height:60px; */
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding-top: 20px;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo-container">
+            <img class="logo" src="logobg.png" alt="Logo">
+            <span class="navbar-text"><strong><em> Foodate </strong></em></span>
+        </div>
+        <div class="nav-links">
+            <a th:href="@{/}" class="button">Home</a>
+            <a th:href="@{/AboutUs}" class="button">who we Are</a>
+            <a th:href="@{/view}" class="button">View Donation </a>
+            <a th:href="@{/Contact}" class="button">Contact</a>
+            <a th:href="@{/Organizations}" class="button">Organizations</a>
+            <a th:href="@{/Event}" class="button">Event</a>
+            <a th:href="@{/donate}" class="button">Donate Food</a>
+        </div>
+    </nav>
+
+    <!-- Content Container -->
+    <div class="container mt-5" style="background-color: white; padding:100px;width:1000px; ">
+        <p><span style="padding-left:220px;color:crimson; font-size: 30px; font-family:Cambria;"><strong> CONNECT WITH
+                    US TODAY</strong></span></p>
+        <div class="row">
+
+            <div class="col-md-6" style="padding-top: 50px;">
+                <p>
+                    At <span style="color:black; font-family:Cambria;"> Foodate </span>, we believe in the power of
+                    generosity
+                    to<br> create positive change. By donating surplus food, you <br>contribute to a brighter future for
+                    those
+                    facing food insecurity. Your support helps us nourish communities and spread kindness. Join us in
+                    the fight against hunger, and let's make a meaningful impact together!
+                </p>
+                <p>
+                    <i class="fas fa-phone"></i> Contact us at: (555) 123-4567<br>
+                    <i class="fas fa-envelope"></i> Email us: info@foodate.com<br>
+                    <i class="fas fa-map-marker-alt"></i> Visit us at: 500 Amber Street Shana colony, Pune
+                </p>
+
+            </div>
+            <!-- Right Column - Contact Form -->
+            <div class="col-md-6"  style="padding-top:50px;">
+                <div class="container">
+                    <form th:action="@{/submitContactForm}" method="post" style="font-family:Cambria;">
+                        <h2>Contact Us</h2>
+
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" name="name" class="form-control" required>
+
+                        <label for="email">Your Email:</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+
+                        <label for="message">Your Message:</label>
+                        <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
+                        <br>
+                        <button type="submit" class="btn btn-success">Send Message</button>
+
+                        <p>Feel free to reach out to us!</p>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="containers">
+        <section>
+           <h1><br>
+        <br></h1>
+        </section>
+    </div>
+    
+
+    <div class="container-topfo" >
+        <div>
+            <h5><b>CONTACT US</h5></b>
+            <p>500 Amber Street Shana colony<br>Pune, (555) 123-4567</p>
+            <p>Email: info@foodate.com</p>
+        </div>
+        <div>
+            <h5><b>CONNECT WITH US</h5></b>
+            <a href="#" target="_blank"><img src="insta-logo.png" alt="Instagram" style="width:30px"></a><br>
+            <a href="#" target="_blank"><img src="facebook-logo.png" alt="Facebook" style="width:30px"></a><br>
+            <a href="#" target="_blank"><img src="mail-logo.png" alt="Mail" style="width:30px"></a>
+        </div>
+    </div>
+    <div class="container-fotop">
+        <h5>Registered Charity Number : 0123456789</h5>
+    </div>
+
+
+    <footer>
+        <p>&copy; 2024 Food Donation Organization. All rights reserved.</p>
+    </footer>
+
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.8/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

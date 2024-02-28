@@ -1,9 +1,10 @@
-# Foodate (Food Donation Management System)
-
+# Foodate ## (Food Donation Management System)
 
 ## Introduction:
 -- A web application which is useful for management of food donation and collection activities.  
--- In our commitment to addressing the pervasive issue of food insecurity, we propose the development of a Food Donation Management System. This system aims to streamline and optimize the process of food donation, ensuring efficient collection, distribution, and tracking of donated food items. With the increasing global concern about hunger and food wastage, this project seeks to bridge the gap between surplus food providers and those in need.
+-- In our commitment to addressing the pervasive issue of food insecurity, we propose the development of a Food Donation Management System. This system aims to streamline 
+   and optimize the process of food donation, ensuring efficient collection, distribution, and tracking of donated food items. With the increasing global concern about 
+   hunger and food wastage, this project seeks to bridge the gap between surplus food providers and those in need.
 
 
 ## Objectives:

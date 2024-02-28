@@ -30,5 +30,7 @@ Enable donors to receive feedback on the impact of their contributions, fosterin
  ### -- Conclusion:
 This Food Donation Management System combines a user-friendly interface with a robust backend, utilizing Java, Spring Boot, Hibernate, and Thymeleaf. By incorporating dynamic form handling, database storage, and easy navigation, the system aims to facilitate seamless interactions for users interested in contributing to the cause of reducing food waste and addressing food insecurity.
 
-![image](https://github.com/rachana97-dot/FoodDonationSystem/assets/62335644/4ca7d9e4-cea2-4c88-a7a1-470001ba5870)
+![Screenshot (800)](https://github.com/rachana97-dot/FoodDonationSystem/assets/62335644/4f9d30cc-0a50-4986-bb6d-9dd571c10e20)
+"C:\Users\Admin\Videos\Captures\Food Waste Management System - Google Chrome 2024-02-28 20-49-10.mp4"
+
 

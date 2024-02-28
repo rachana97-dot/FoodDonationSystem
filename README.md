@@ -1,24 +1,25 @@
-# Foodate ## (Food Donation Management System)
+# Foodate 
+(Food Donation Management System)
 
 ## Introduction:
--- A web application which is useful for management of food donation and collection activities.  
--- In our commitment to addressing the pervasive issue of food insecurity, we propose the development of a Food Donation Management System. This system aims to streamline 
-   and optimize the process of food donation, ensuring efficient collection, distribution, and tracking of donated food items. With the increasing global concern about 
-   hunger and food wastage, this project seeks to bridge the gap between surplus food providers and those in need.
+-- A web application which is useful for management of food donation and collection activities.  <br>
+-- In our commitment to addressing the pervasive issue of food insecurity, we propose the development of a Food Donation Management System. <br>
+   This system aims to streamline and optimize the process of food donation, ensuring efficient collection, distribution, and tracking of donated food items.  <br>
+   With the increasing global concern about hunger and food wastage, this project seeks to bridge the gap between surplus food providers and those in need.
 
 
 ## Objectives:
 
 ### User-Friendly Interface:
-✨ Develop an intuitive platform for donors to input information about surplus food items.
+✨ Develop an intuitive platform for donors to input information about surplus food items. <br>
 ✨ Ensure a straightforward process for recipient organizations to express their needs.
 
 ### Efficient Coordination:
-📅 Implement a basic scheduling system for donors to coordinate food pickups with recipient organizations.
+📅 Implement a basic scheduling system for donors to coordinate food pickups with recipient organizations. <br>
 📅 Prioritize simplicity to encourage the involvement of a wide range of users.
 
 ### Reducing Food Wastage:
-🌐 Implement an intelligent algorithm to match surplus food with the most relevant recipient organizations.
+🌐 Implement an intelligent algorithm to match surplus food with the most relevant recipient organizations. <br>
 🌐 Utilize notifications and alerts to ensure timely consumption of perishable items.
 
 ### Community Engagement:
@@ -26,15 +27,17 @@
 🤝 Enable donors to receive feedback on the impact of their contributions, fostering a sense of community and social responsibility.
 
 ### Technological Stack:
-Technological Stack:
-Frontend: 🌐 HTML, CSS, JavaScript, Thymeleaf
-Backend: ☕ Java, Spring Boot
-Database: 🗃 Hibernate for data persistence, MySQL
-Dependency Management: 🛠 Maven for handling project dependencies
-Dependencies: 🔄 Spring Web, Spring Boot JPA, MySQL Driver, Thymeleaf, DevTools.
+Technological Stack: <br>
+Frontend: 🌐 HTML, CSS, JavaScript, Thymeleaf <br>
+Backend: ☕ Java, Spring Boot <br>
+Database: 🗃 Hibernate for data persistence, MySQL <br>
+Dependency Management: 🛠 Maven for handling project dependencies <br>
+Dependencies: 🔄 Spring Web, Spring Boot JPA, MySQL Driver, Thymeleaf, DevTools. <br>
 
  ### -- Conclusion:
-This Food Donation Management System combines a user-friendly interface with a robust backend, utilizing Java, Spring Boot, Hibernate, and Thymeleaf. By incorporating dynamic form handling, database storage, and easy navigation, the system aims to facilitate seamless interactions for users interested in contributing to the cause of reducing food waste and addressing food insecurity.🌍🍽️✨
+This Food Donation Management System combines a user-friendly interface with a robust backend, utilizing Java, Spring Boot, Hibernate, and Thymeleaf. <br>
+By incorporating dynamic form handling, database storage, and easy navigation, the system aims to facilitate seamless interactions for users interested in <br>
+contributing to the cause of reducing food waste and addressing food insecurity.🌍🍽️✨
 
 
 ## ScreenShots :-

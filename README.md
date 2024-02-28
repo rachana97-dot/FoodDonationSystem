@@ -22,7 +22,7 @@
 🌐 Utilize notifications and alerts to ensure timely consumption of perishable items.
 
 ### Community Engagement:
-🤝 Incorporate a feature for community involvement, allowing individuals to volunteer for food distribution events.
+🤝 Incorporate a feature for community involvement, allowing individuals to volunteer for food distribution events.<br>
 🤝 Enable donors to receive feedback on the impact of their contributions, fostering a sense of community and social responsibility.
 
 ### Technological Stack:
